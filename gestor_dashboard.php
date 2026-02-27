@@ -7,14 +7,40 @@
     <title>gestor dashboard</title>
 </head>
 <header>
-        <nav class="navbar navbar-expand-lg bg-dark d-flex justify-content-center " style="max-height: 5rem;">
-            <h3 class="text-light m-4">SGM| Gestão administrativa</h4>
-            
-            <a href="api/logout.php" class="btn btn-outline-success m-5">Sair</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="gestor_dashboard.php">SGM Admin</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active" href="gestor_chamados.php">Chamados</a>
+                <a class="nav-link" href="gestor_locais.php">Locais</a>
+                <a class="nav-link" href="api/logout.php">Sair</a>
+            </div>
+        </div>
+    </nav>
             
 </header>
 <body>
 <main>
+  
+<section>
+  <div class="modal" id="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="btn-close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Deseja mesmo sair?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sim</button>
+        <button type="button" class="btn btn-primary">Não</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
     <div class="container d-flex m-5 shadow" style="max-width:90rem;min-height:10rem;background-color:;">
  
 
@@ -45,12 +71,19 @@
 <div class="d-flex justify-content-center">
     <a href="gestor_chamados.php" class="btn btn-dark m-5 w-20">
         <i class="bi bi-list"></i>    Gerenciar todos os chamados</a>
+      
+     <a href="user_lista.php" class="btn btn-success m-5 w-20">
+       <i class="bi bi-people-fill"></i>   Gerenciar Usuários</a>
 
     
-    <button type="button" class="btn btn-outline-primary m-5 w-20">
-        <i class="bi bi-gear"></i>    Configurar ambientes</button>
-</div>
+    <a href ="ambientes_dashboard.php" type="button" class="btn btn-outline-primary m-5 w-20">
+        <i class="bi bi-gear"></i>    Configurar ambientes</a>
+      
+    <a href ="blocos_dashboard.php" type="button" class="btn btn-outline-primary m-5 w-20">
+        <i class="bi bi-gear"></i>    Configurar Blocos</a>
     
-</body>
+     <a href ="servicos_dashboard.php" type="button" class="btn btn-outline-primary m-5 w-20">
+        <i class="bi bi-gear"></i>    Configurar Serviços</a>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </html>
